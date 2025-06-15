@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>buat nanaz dari pg</title>
+    <link rel="icon" href="https://i.ibb.co.com/hXZsYxZ/heart.png">
+</head>
+
+<body>
+    <div class="background-decor">
+        <img src="bunga.png" class="flower" style="left: 10%; animation-delay: 0s; width: 40px;">
+        <img src="bunga.png" class="flower" style="left: 70%; animation-delay: 3s; width: 50px;">
+        <img src="kupu.png" class="butterfly" style="left: 30%; top: 80%; width: 60px; animation-delay: 1s;">
+        <img src="kupu.png" class="butterfly" style="left: 80%; top: 90%; width: 40px; animation-delay: 5s;">
+    </div>
+
+    <div class="container">
+        <!-- Popup page -->
+        <div id="popup" class="active">
+            <h2 id="popupText">maaf kalo agak alay , soalnya aku kalo ngerasa deket sm orang emang begini <3</h2>
+            <button onclick="nextPopup()">tap !</button>
+        </div>
+
+        <!-- Question page -->
+        <div id="questionPage">
+            <h2><b></b>mau liat orang paling imut sejagat tangerang ? </h2>
+            <div>
+        <button onclick="goToGallery()">mauu</button>
+
+        <button id="noBtn" onclick="moveNoBtn()">tidaa</button>
+            </div>
+        </div>
+
+        <!-- Gallery page -->
+        <div id="galleryPage">
+            <!-- Audio with autoplay and muted -->
+            <audio id="audio" autoplay muted loop>
+                <source src="lagu.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <h2><b>ini dia pelakunyaaaaa 😭💖💞</b></h2>
+            <div class="gallery">
+                <!-- Gambar-gambar foto -->
+                <img src="foto/1.jpg" alt="Foto kamu">
+                <img src="foto/2.jpg" alt="Foto kamu">
+                <img src="foto/3.jpg" alt="Foto kamu">
+                <img src="foto/4.jpg" alt="Foto kamu">
+                <img src="foto/5.jpg" alt="Foto kamu">
+                <img src="foto/6.jpg" alt="Foto kamu">
+                <img src="foto/7.jpg" alt="Foto kamu">
+                <img src="foto/8.jpg" alt="Foto kamu">
+                <img src="foto/9.jpg" alt="Foto kamu">
+                <img src="foto/10.jpg" alt="Foto kamu">
+                <img src="foto/11.jpg" alt="Foto kamu">
+                <img src="foto/12.jpg" alt="Foto kamu">
+                <img src="foto/13.jpg" alt="Foto kamu">
+                <img src="foto/14.jpg" alt="Foto kamu">
+                <img src="foto/15.jpg" alt="Foto kamu">
+                <img src="foto/16.jpg" alt="Foto kamu">
+                <img src="foto/17.jpg" alt="Foto kamu">
+                <img src="foto/1.jpg" alt="Foto kamu">
+                <img src="foto/2.jpg" alt="Foto kamu">
+                <img src="foto/3.jpg" alt="Foto kamu">
+            </div>
+        </div>
+    </div>
+
+    <!-- Menyertakan file JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // Fungsi untuk memulai audio setelah interaksi pengguna (untuk perangkat mobile)
+        document.addEventListener("click", function () {
+            var audio = document.getElementById('audio');
+            audio.muted = false; // Matikan mute untuk memulai suara setelah klik
+            audio.play();        // Memulai audio
+        });
+    </script>
+</body>
+
+</html>
